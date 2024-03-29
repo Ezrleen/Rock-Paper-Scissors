@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <style>
+        .card {
+            
+            margin-bottom: 50px;
+            width: 150px;
+            height: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+            
+            
+        }
+        .cards .card:hover{
+            transform: scale(1.1,1.1);
+        }
+        .cards:hover > .card:not(:hover){
+            filter: blur(10px);
+            transform: scale(0.9,0.9);
+        }
+        .cards{
+            display: flex;
+            height: 900px;
+            background-color: rgb(255, 255, 255);
+            align-items: center;
+            justify-content: space-around;
+            
+        }
+        img{
+            cursor: pointer;
+        }
+        .image{
+            display: flex;
+            flex-direction: column;
+        }
+        .image>p{
+            font-family: "Love Ya Like A Sister";
+            font-size: 100px;
+            text-align: center;
+            margin-top: -40px;
+            margin-left: 50px;
+    
+        }
+        
+
+
+    </style>
+    <script>
+        function add(){
+            alert("hllo");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="cards">
+        <div class="image">
+            <img onclick="add()" class="card" src="img/32818974-cartoon-rock.jpg" alt="">
+            <p>Rock</p>
+        </div>
+        <div class="image">
+            <img class="card" src="img/4faecfda18947d8e03ef0d188e4de42d.jpg" alt="">
+            <p>Papier</p>
+        </div>
+        <div class="image">
+            <img class="card" src="img/88d0b656dc39b300484a30b18fbb9071.jpg" alt="">
+            <p>Scissors</p>
+        </div>
+        
+    </div>
