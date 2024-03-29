@@ -7,56 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Rubik+Scribble&display=swap" rel="stylesheet">
-    <style>
-        .card {
-            
-            margin-bottom: 50px;
-            width: 150px;
-            height: 150px;
-            margin-left: auto;
-            margin-right: auto;
-            transition: transform 0.3s ease;
-            border-radius: 15px;
-            
-            
-        }
-        .cards .card:hover{
-            transform: scale(1.1,1.1);
-        }
-        .cards:hover > .card:not(:hover){
-            filter: blur(10px);
-            transform: scale(0.9,0.9);
-        }
-        .cards{
-            display: flex;
-            height: 900px;
-            background-color: rgb(255, 255, 255);
-            align-items: center;
-            justify-content: space-around;
-            
-        }
-        img{
-            cursor: pointer;
-        }
-        .image{
-            display: flex;
-            flex-direction: column;
-        }
-        .image>p{
-            font-family: "Love Ya Like A Sister";
-            font-size: 100px;
-            text-align: center;
-            margin-top: -40px;
-            margin-left: 50px;
-    
-        }
-        body,
-        .cards{
-            background-color: rgb(216, 236, 34);
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script>
 
         function cumputerch(){
@@ -92,9 +43,19 @@
 
             }
             ch1=cumputerch();
+            game(ch,ch1)
             
 
             
+        }
+        function game(ch,ch1){
+            if (ch===ch1) alert("tie!");
+            else if(ch==="Rock" && ch1==="Scissors")alert(`You Won \nYou Picked ${ch} and the AI picked ${ch1}`);
+            else if(ch==="Rock" && ch1==="Papier") alert(`You Lost \nYou Picked ${ch} and the AI picked ${ch1}`);
+            else if (ch==="Papier" && ch1==="Rock") alert(`You won \nYou Picked ${ch} and the AI picked ${ch1}`);
+            else if (ch==="Papier" && ch1==="Scissors") alert(`You Lost \nYou Picked ${ch} and the AI picked ${ch1}`);
+            else if(ch==="Scissors" && ch1==="Papier") alert(`You Won \nYou Picked ${ch} and the AI picked ${ch1}`);
+            else alert(`You Lost \nYou Picked ${ch} and the AI picked ${ch1}`);
         }
     </script>
 </head>
